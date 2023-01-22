@@ -5,16 +5,21 @@ package usermgmt;
 option go_package = "example.com/go-usermgmt-grpc;go_usermgmt_grpc";
 
 service UserManagement {
-    rpc CreateNewUser(NewUser) returns (User) {}
+  rpc CreateNewUser(NewUser) returns (User) {}
+  rpc GetUsers(GetUserParams) returns (UsersList) {}
 }
 
 message NewUser {
-    string name = 1;
-    int32 age = 2;
+  string name = 1;
+  int32 age = 2;
 }
 
 message User {
-    string name = 1;
-    int32 age = 2;
-    int32 id = 3;
+  string name = 1;
+  int32 age = 2;
+  int32 id = 3;
 }
+
+message GetUserParams {}
+
+message UsersList { repeated User users = 1; }
