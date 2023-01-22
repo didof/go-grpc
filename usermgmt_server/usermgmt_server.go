@@ -8,7 +8,7 @@ import (
 	"net"
 	"os"
 
-	pb "example.com/go-usermgmt-grpc/usermgmt"
+	pb "github.com/didof/go-grpc/usermgmt"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/encoding/protojson"
 )
