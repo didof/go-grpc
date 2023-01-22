@@ -28,7 +28,7 @@ func main() {
 
 	var new_users = make(map[string]int32)
 	new_users["Alice"] = 43
-	new_users["Bob"] = 30
+	// new_users["Bob"] = 30
 
 	for name, age := range new_users {
 		r, err := client.CreateNewUser(ctx, &pb.NewUser{
